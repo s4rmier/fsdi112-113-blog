@@ -1,0 +1,5 @@
+# Register to sendgrid for next class
+https://sendgrid.com/
+verified sender: do not use yahoo or icloud
+
+Add external CSS
