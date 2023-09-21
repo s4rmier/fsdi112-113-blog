@@ -4,6 +4,16 @@
     margin: 0 auto;
 }
 
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+.flex-justify {
+    display: flex;
+    justify-content: center;
+}
+
 main {
     padding: 2rem 0rem;
 }
