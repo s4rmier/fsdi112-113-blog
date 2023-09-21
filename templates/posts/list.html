@@ -3,17 +3,38 @@
 {% block title %}Blog | Posts{% endblock title %}
 
 {% block content %}
-<h1>Posts</h1>
-{% for post in post_list %}
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5><p>{{ post.author }}</p>
-        <h6 class="card-subtitle mb-2 text-body-secondary">{{ post.subtitle }}</h6>
-        <p class="card-text">{{ post.body|truncatechars:64 }}</p>
-        <a href="{% url 'detail' post.id %}" class="card-link">Details</a>
-        <a href="{% url 'update' post.id %}">Update</a>
-        <a href="{% url 'delete' post.id %}">Delete</a>
+<main id="list-page">
+    <section class="container flex-col">
+        <div class="hero-headline flex-col justify">
+            <h1>Unveiling the Digital Realm: Code, Tech, and the Hacker's Odyssey</h1>
+            <p>Welcome to our digital domain where we embark on a journey through the intricate world of coding, the latest in tech innovations, and the intriguing realm of hackers.<br><br> Join us as we explore the ever-evolving landscape of technology, uncovering hidden gems, and unraveling the mysteries of the digital universe. Whether you're a seasoned developer, a tech enthusiast, or simply curious about the digital frontier, you're in for an exciting ride. Dive in and let's decode the future together.</p>
+        </div>
+    </section>
+
+    {% if user.is_authenticated %}
+    <div id="add-post" class="flex-col container">
+        <button class="button" onclick="window.location.href = '{% url 'new' %}'"><i class="fa-solid fa-pen-to-square"></i> Post</button>
     </div>
-</div>
-{% endfor %}
+    {% endif %}
+   
+    <section id="posts-container" class="container flex-row">
+        {% for post in post_list %}
+        <article class="post-item">
+            <figure class="flex-col">
+                <img src="https://source.unsplash.com/random/800x800/?img=15" alt="">
+                <figcaption>
+                    <h2>{{ post.title }}</h2>
+                    <div class="flex-row align">
+                        <h3>by: <span>{{ post.author.first_name|default:"Anonymous" }} {{ post.author.last_name|default:"Author" }}</span></h3>
+                        <h3 class="post-date"> {{ post.created_on }}</h3>
+                    </div>
+                    <p>{{ post.subtitle }}</p>
+                </figcaption>
+                <button class="button" onclick="window.location.href = '{% url 'detail' post.id %}'"> <i class="fa-solid fa-arrow-up-right-from-square"></i>Read</button>
+            </figure>
+        </article>
+        {% endfor %}
+    </section>
+  
+</main>
 {% endblock content %}

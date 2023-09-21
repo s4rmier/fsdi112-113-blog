@@ -3,5 +3,17 @@
 {% block title %}Blog | Home{% endblock title %}
 
 {% block content %}
-<h1>Home Page</h1>
+<main id="home-page" class="flex-col justify">
+    <section class="container">
+        <div class="hero-headline flex-col justify">
+            <h1>Unlock the Digital World with Cutting-Edge Code:</h1>
+            <p>Stay at the forefront of technology trends and coding innovations. Explore in-depth tutorials and insightful articles designed to fuel your tech passion.</p>
+        </div>
+      <button class="button flex-row align" onclick="window.location.href = '{% url 'list' %}'">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>Explore
+      </button>
+    </section>
+ </main>
 {% endblock content %}
+
+<!-- https://source.unsplash.com/random -->

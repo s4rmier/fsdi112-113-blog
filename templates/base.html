@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
-
-    <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="https://kit.fontawesome.com/c7dcac8717.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- <nav>
-      <div class="flex-align">
-        
-      </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container container-fluid">
-          <a class="navbar-brand" href="#">The Blog</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
-              </li>
-              {% if user.is_authenticated %}
-                <p class="nav-link">Welcome, {{ user.username }}!</p>
-                <a class="nav-link" href="{% url 'logout' %}">Log Out | </a>
+  <div id="user-panel-backdrop" class="hidden"></div>
+    <nav>
+      <div class="container nav-container flex-row align">
+        <ul class="flex-row align">
+            <li class="brand-container flex-col">
+              <a href="{% url 'home' %}">
+                <span>The</span>
+                <h1>Byte Club</h1>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+              <a href="{% url 'list' %}">Blog</a>
+            </li>
+        </ul>
+        <ul id="user-block" class="flex-row align">
+          {% if user.is_authenticated %}
+            <li class="user-control flex-row align">
+              <p class="nav-link"><span id="user-greeting"></span>
+                {% if user.is_superuser %}
+                  <i class="fa-solid fa-user-gear"></i> 
+                {% endif %}
+                {{ user.first_name|default:"User" }}!
+              </p>
+              <i id="user-toggle-button" class="fa-solid fa-square-caret-right"></i>
+            </li>
+            
+            <ul id="user-panel" class="hidden flex-col">
+              <li>
                 <a class="nav-link" href="{% url 'password_change' %}">Change Password</a>
-              {% else %}
-                <a class="nav-link" href="{% url 'signup' %}">Sign Up | </a>
-                <a class="nav-link" href="{% url 'login' %}">Log In</a>
-              {% endif %}
+              </li>
+              <li>
+                <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+              </li>
             </ul>
-          </div>
-        </div>
+            
+            
+          {% else %}
+            <div class="flex-row">
+              <li>
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              </li>
+              <li>
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+            </div>
+          {% endif %}
+        </ul>
     </nav>
 
-    <main class="container">
-      {% block content %}
-      {% endblock content %}
-    </main>
+    {% block content %}
+    {% endblock content %}
 
-    <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous">
-    </script>
+    <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>
