@@ -199,9 +199,9 @@
   }
   main#list-page section#posts-container article.post-item figure {
     width: 400px;
-    background-color: rgba(16, 27, 46, 0.15);
-    -webkit-backdrop-filter: blur(14px);
-            backdrop-filter: blur(14px);
+    background-color: rgba(16, 27, 46, 0.5);
+    -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
     border-radius: 10px;
   }
   main#list-page section#posts-container article.post-item figure img {
