@@ -5,12 +5,13 @@
 {% block content %}
     <main id="detail-page" class="flex-col align">
         {% if user.is_authenticated %}
-        <div class="post-control flex-row align">
-            <i class="fa-solid fa-file-pen" onclick="window.location.href = '{% url 'update' post.id %}'"></i>
+        <div class="post-control flex-col align justify">
+            <i class="fa-solid fa-pen-to-square" onclick="window.location.href = '{% url 'update' post.id %}'"></i>
             <i class="fa-solid fa-trash-can" onclick="window.location.href = '{% url 'delete' post.id %}'"></i>
         </div>
         {% endif %}
         <article class="container">
+            <img src="https://source.unsplash.com/random/800x800/?img=15" alt="">
             <h1>{{ post.title }}</h1>
             <h3>{{ post.subtitle }}</h3>
             <div class="flex-row align">
@@ -21,3 +22,5 @@
         </article>
     </main>
 {% endblock content %}
+
+<i ></i>

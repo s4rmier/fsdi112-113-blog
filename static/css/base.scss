@@ -184,6 +184,21 @@
         }
     }
 
+    main#about-page {
+        background-image: url(/static/img/about-hero.jpg);
+        min-height: calc(100vh - 72px);
+        background-size: cover;
+        width: 100%;
+        background-attachment: fixed;
+        div.hero-headline {
+            width: 50%;
+            p {
+                margin: 2rem 0rem;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
     main#list-page{
         background-image: url(/static/img/posts-hero.jpg);
         min-height: calc(100vh - 72px);
@@ -211,12 +226,15 @@
                 margin: 1rem;
                 figure {
                     width: 400px;
-                    background-color: rgba($color: #101b2e, $alpha: 0.5);
-                    backdrop-filter: blur(20px);
+                    background-color: rgba($color: #101b2e, $alpha: 0.15);
+                    backdrop-filter: blur(14px);
+                    border-radius: 10px;
                     img {
                         width: 100%;
                         object-fit: cover;
                         height: 300px;
+                        filter: grayscale(0.8);
+                        border-radius: 10px;
                     }
                     figcaption {
                         color: var(--color-light-main);
@@ -263,16 +281,17 @@
         div.post-control {
             position: fixed;
             top: 10rem;
-            right: 6rem;
-            padding: .75rem;
+            right: 5rem;
+            padding: .5rem;
             border-radius: 10px;
             background-color: var(--color-light-main);
             opacity: .15;
             i {
+                text-align: center;
                 cursor: pointer;
                 color: var(--color-dark-submain);
                 font-size: 1.25rem;
-                margin: 0rem .5rem;
+                margin: .5rem 0.75rem;
             }
         }
 
@@ -283,6 +302,14 @@
         article {
             width: 75%;
             margin: 2rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 360px;
+                border-radius: 10px;
+                filter: grayscale(0.8);
+            }
 
             h1 {
                 margin: 2rem 0rem 0.5rem;
