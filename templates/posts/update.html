@@ -3,10 +3,14 @@
 {% block title %}Blog | Update Post {{ post.title}}{% endblock title %}
 
 {% block content %}
-<h1>Update Post</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn-success" value="Submit">
-</form>
+<main id="update-page" class="flex-col align">
+    <div class="container flex-col">
+        <h1>Update Post</h1>
+        <form method="POST" class="flex-col">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn-success" value="Submit">
+        </form>
+    </div>
+</main>
 {% endblock content %}

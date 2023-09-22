@@ -3,10 +3,14 @@
 {% block title %}Blog | Sign-up{% endblock title %}
 
 {% block content %}
-<h1>Sign Up</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-success" value="Sign Up">
-</form>
+<main id="signup-page">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success" value="Sign Up">
+        </form>
+    </div>
+</main>
 {% endblock content %}

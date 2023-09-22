@@ -3,12 +3,16 @@
 {% block title %} Blog | {{ post.title }} {% endblock title %}
 
 {% block content %}
-<h1>Delete Post</h1>
-
-<form method="POST">
-    <p>Are you sure you want to delete this post?</p>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn-success" value="Submit">
-</form>
+<main id="delete-page">
+    <div class="container">
+        <h1>Delete Post</h1>
+        
+        <form method="POST">
+            <p>Are you sure you want to delete this post?</p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn-success" value="Delete">
+        </form>
+    </div>
+</main>
 {% endblock content %}

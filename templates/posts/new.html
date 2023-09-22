@@ -3,11 +3,14 @@
 {% block title %}BLog | New Post{% endblock title %}
 
 {% block content %}
-
-<h1>New Post</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn-success" value="Submit">
-</form>
+<main id="newpost-page" class="flex-col">
+    <div class="container">
+        <h1>New Post</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn-success" value="Submit">
+        </form>
+    </div>
+</main>
 {% endblock content %}

@@ -36,7 +36,7 @@
                 {% if user.is_superuser %}
                   <i class="fa-solid fa-user-gear"></i> 
                 {% endif %}
-                {{ user.first_name|default:"User" }}!
+                {{ user.first_name|default:"Anonymous Author" }}!
               </p>
               <i id="user-toggle-button" class="fa-solid fa-square-caret-right"></i>
             </li>
