@@ -47,10 +47,10 @@
 
 @media screen and (min-width: 960px) {
   div#user-panel-backdrop {
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    width: 100vw;
-    background-color: transparent;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
   }
   button.button {
     width: -moz-min-content;
@@ -73,6 +73,7 @@
   nav {
     background-color: var(--color-dark-submain);
     padding: 1rem;
+    z-index: 999;
   }
   nav div.nav-container {
     justify-content: space-between;
