@@ -12,8 +12,10 @@
     </section>
 
     {% if user.is_authenticated %}
-    <div id="add-post" class="flex-col container">
-        <button class="button" onclick="window.location.href = '{% url 'new' %}'"><i class="fa-solid fa-pen-to-square"></i> Post</button>
+    <div id="post-control-panel" class="flex-row container">
+        <button class="button" onclick="window.location.href = '{% url 'new' %}'"><i class="fa-solid fa-pen-to-square"></i> New</button>
+        <button class="button" onclick="window.location.href = '{% url 'draft' %}'"><i class="fa-solid fa-pen-ruler"></i> Drafts</button>
+        <button class="button" onclick="window.location.href = '{% url 'archived' %}'"><i class="fa-regular fa-folder-open"></i> Archived</button>
     </div>
     {% endif %}
    

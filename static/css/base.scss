@@ -63,6 +63,7 @@
     }
 
     button.button {
+        height: 2rem;
         width: min-content;
         padding: .5rem .65rem;
         font-family: var(--font-links);
@@ -215,10 +216,13 @@
             }
         }
 
-        div#add-post {
-            align-items: flex-end;
+        div#post-control-panel {
+            justify-content: flex-end;
             margin: 2rem 0rem;
             border-radius: 10px;
+            button.button {
+                margin: 0rem .75rem;
+            }
         }
 
         section#posts-container {
@@ -345,7 +349,7 @@
         }
     }
 
-    main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page,main#pwchange-ok-page, main#logout-page {
+    main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page,main#pwchange-ok-page, main#logout-page, main#forbidden-page {
         min-height: calc(100vh - 72px);
         width: 100%;
         background-color: var(--color-dark-submain);
