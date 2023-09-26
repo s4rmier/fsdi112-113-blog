@@ -7,13 +7,15 @@
     <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script src="https://kit.fontawesome.com/c7dcac8717.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/static/img/favico.png" type="image/x-icon">
 </head>
 <body>
   <div id="user-panel-backdrop" class="hidden"></div>
     <nav>
       <div class="container nav-container flex-row align">
         <ul class="flex-row align">
-            <li class="brand-container flex-col">
+            <li class="brand-container flex-row align">
+              <img id="brand-logo" src="/static/img/logo.png" alt="">
               <a href="{% url 'home' %}">
                 <span>The</span>
                 <h1>Byte Club</h1>

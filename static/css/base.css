@@ -89,6 +89,345 @@
   nav div.nav-container ul li.user-control i {
     margin: 0.5rem;
   }
+  nav div.nav-container ul li img#brand-logo {
+    height: 30px;
+    margin-right: 1rem;
+  }
+  nav div.nav-container ul li.brand-container a {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+  nav div.nav-container ul li.brand-container a span {
+    font-family: var(--font-utility);
+    font-size: 0.75rem;
+  }
+  nav div.nav-container ul li.brand-container a h1 {
+    font-family: var(--font-utility);
+    text-transform: uppercase;
+  }
+  nav div.nav-container ul li.brand-container a h1:hover {
+    text-decoration: none;
+  }
+  nav div.nav-container ul#user-block {
+    position: relative;
+  }
+  nav div.nav-container ul#user-block li.user-control p {
+    font-weight: 800;
+  }
+  nav div.nav-container ul#user-block li.user-control p span {
+    font-weight: 400;
+  }
+  nav div.nav-container ul#user-block li.user-control i#user-toggle-button {
+    font-size: 150%;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  nav div.nav-container ul#user-block ul#user-panel {
+    position: absolute;
+    inset: 0;
+    top: 30px;
+    background-color: var(--color-dark-submain);
+    min-height: 240%;
+    padding: 1rem 0rem;
+    z-index: 999;
+  }
+  nav div.nav-container ul#user-block ul#user-panel li {
+    padding: 0.25rem 0rem;
+    text-decoration: underline;
+    text-align: right;
+  }
+  main {
+    padding: 2rem 1rem;
+    color: var(--color-light-main);
+  }
+  main h1 {
+    font-family: var(--font-links);
+    font-size: 2.25rem;
+  }
+  main p {
+    font-family: var(--font-header-ss);
+    font-size: 1.25rem;
+  }
+  main#home-page {
+    background-image: url(/static/img/home-hero.jpg);
+    background-size: cover;
+    height: calc(100vh - 72px);
+    width: 100%;
+  }
+  main#home-page div.hero-headline {
+    width: 50%;
+  }
+  main#home-page div.hero-headline p {
+    margin: 2rem 0rem;
+    font-size: 1.25rem;
+  }
+  main#about-page {
+    background-image: url(/static/img/about-hero.jpg);
+    min-height: calc(100vh - 72px);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+  }
+  main#about-page div.hero-headline {
+    width: 50%;
+  }
+  main#about-page div.hero-headline p {
+    margin: 2rem 0rem;
+    font-size: 1.25rem;
+  }
+  main#list-page {
+    background-image: url(/static/img/posts-hero.jpg);
+    min-height: calc(100vh - 72px);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+  }
+  main#list-page div.hero-headline {
+    margin-top: 5rem;
+    width: 50%;
+  }
+  main#list-page div.hero-headline p {
+    margin: 2rem 0rem;
+    font-size: 1.25rem;
+  }
+  main#list-page div#post-control-panel {
+    justify-content: flex-end;
+    margin: 2rem 0rem;
+    border-radius: 10px;
+  }
+  main#list-page div#post-control-panel button.button {
+    margin: 0rem 0.75rem;
+  }
+  main#list-page section#posts-container {
+    flex-wrap: wrap;
+  }
+  main#list-page section#posts-container article.post-item {
+    margin: 1rem;
+  }
+  main#list-page section#posts-container article.post-item figure {
+    width: 400px;
+    background-color: rgba(16, 27, 46, 0.5);
+    -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+    border-radius: 10px;
+  }
+  main#list-page section#posts-container article.post-item figure img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+    filter: grayscale(0.8);
+    border-radius: 10px;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption {
+    color: var(--color-light-main);
+    padding: 2rem;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption h2 {
+    font-family: var(--font-header-ss);
+  }
+  main#list-page section#posts-container article.post-item figure figcaption div {
+    margin: 0.5rem 0rem 1rem;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption div h3 {
+    opacity: 50%;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.75rem;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption div h3 span {
+    font-weight: 400;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption div h3.post-date {
+    opacity: 50%;
+    margin: 0rem 1rem;
+  }
+  main#list-page section#posts-container article.post-item figure figcaption p {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  main#list-page section#posts-container article.post-item figure button.button {
+    width: -moz-min-content;
+    width: min-content;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    justify-self: flex-end;
+  }
+  main#detail-page {
+    background-color: var(--color-dark-submain);
+    position: relative;
+    min-height: calc(100vh - 72px);
+  }
+  main#detail-page div.post-control {
+    position: fixed;
+    top: 10rem;
+    right: 5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--color-light-main);
+    opacity: 0.15;
+  }
+  main#detail-page div.post-control i {
+    text-align: center;
+    cursor: pointer;
+    color: var(--color-dark-submain);
+    font-size: 1.25rem;
+    margin: 0.5rem 0.75rem;
+  }
+  main#detail-page div.post-control:hover {
+    opacity: 1;
+  }
+  main#detail-page article {
+    width: 75%;
+    margin: 2rem;
+  }
+  main#detail-page article img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 360px;
+    border-radius: 10px;
+    filter: grayscale(0.8);
+  }
+  main#detail-page article h1 {
+    margin: 2rem 0rem 0.5rem;
+  }
+  main#detail-page article h3 {
+    font-family: var(--font-header-ss);
+    font-family: 2rem;
+  }
+  main#detail-page article div {
+    margin: 0.5rem 0rem 2rem;
+  }
+  main#detail-page article div h3 {
+    opacity: 50%;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.75rem;
+  }
+  main#detail-page article div h3 span {
+    font-weight: 400;
+  }
+  main#detail-page article div h3.post-date {
+    opacity: 50%;
+    margin: 0rem 1rem;
+  }
+  main#detail-page article p {
+    font-family: var(--font-title);
+  }
+  main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page, main#pwchange-ok-page, main#logout-page, main#forbidden-page, main#password-reset-page {
+    min-height: calc(100vh - 72px);
+    width: 100%;
+    background-color: var(--color-dark-submain);
+  }
+  main#delete-page p, main#signup-page p, main#update-page p, main#newpost-page p, main#login-page p, main#pwchange-page p, main#pwchange-ok-page p, main#logout-page p, main#forbidden-page p, main#password-reset-page p {
+    margin: 2rem 0rem 1rem;
+  }
+  main#delete-page div button.button, main#signup-page div button.button, main#update-page div button.button, main#newpost-page div button.button, main#login-page div button.button, main#pwchange-page div button.button, main#pwchange-ok-page div button.button, main#logout-page div button.button, main#forbidden-page div button.button, main#password-reset-page div button.button {
+    margin: 0rem 1rem;
+  }
+  main#delete-page div h1, main#signup-page div h1, main#update-page div h1, main#newpost-page div h1, main#login-page div h1, main#pwchange-page div h1, main#pwchange-ok-page div h1, main#logout-page div h1, main#forbidden-page div h1, main#password-reset-page div h1 {
+    margin: 2rem 0rem;
+  }
+  main#delete-page div form, main#signup-page div form, main#update-page div form, main#newpost-page div form, main#login-page div form, main#pwchange-page div form, main#pwchange-ok-page div form, main#logout-page div form, main#forbidden-page div form, main#password-reset-page div form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main#delete-page div form input, main#delete-page div form textarea, main#delete-page div form select, main#signup-page div form input, main#signup-page div form textarea, main#signup-page div form select, main#update-page div form input, main#update-page div form textarea, main#update-page div form select, main#newpost-page div form input, main#newpost-page div form textarea, main#newpost-page div form select, main#login-page div form input, main#login-page div form textarea, main#login-page div form select, main#pwchange-page div form input, main#pwchange-page div form textarea, main#pwchange-page div form select, main#pwchange-ok-page div form input, main#pwchange-ok-page div form textarea, main#pwchange-ok-page div form select, main#logout-page div form input, main#logout-page div form textarea, main#logout-page div form select, main#forbidden-page div form input, main#forbidden-page div form textarea, main#forbidden-page div form select, main#password-reset-page div form input, main#password-reset-page div form textarea, main#password-reset-page div form select {
+    padding: 0.5rem 1rem;
+    font-family: var(--font-header-ss);
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+  }
+  main#delete-page div form textarea, main#signup-page div form textarea, main#update-page div form textarea, main#newpost-page div form textarea, main#login-page div form textarea, main#pwchange-page div form textarea, main#pwchange-ok-page div form textarea, main#logout-page div form textarea, main#forbidden-page div form textarea, main#password-reset-page div form textarea {
+    resize: none;
+  }
+  main#delete-page div form label, main#signup-page div form label, main#update-page div form label, main#newpost-page div form label, main#login-page div form label, main#pwchange-page div form label, main#pwchange-ok-page div form label, main#logout-page div form label, main#forbidden-page div form label, main#password-reset-page div form label {
+    font-family: var(--font-utility);
+    text-transform: uppercase;
+  }
+  main#delete-page div form input.btn-success, main#signup-page div form input.btn-success, main#update-page div form input.btn-success, main#newpost-page div form input.btn-success, main#login-page div form input.btn-success, main#pwchange-page div form input.btn-success, main#pwchange-ok-page div form input.btn-success, main#logout-page div form input.btn-success, main#forbidden-page div form input.btn-success, main#password-reset-page div form input.btn-success {
+    width: -moz-min-content;
+    width: min-content;
+    padding: 0.5rem 0.65rem;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-dark-submain);
+    background-color: var(--color-highlight);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+  }
+  main#delete-page div form p, main#signup-page div form p, main#update-page div form p, main#newpost-page div form p, main#login-page div form p, main#pwchange-page div form p, main#pwchange-ok-page div form p, main#logout-page div form p, main#forbidden-page div form p, main#password-reset-page div form p {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+  main#delete-page input.btn-success, main#signup-page input.btn-success, main#update-page input.btn-success, main#newpost-page input.btn-success, main#login-page input.btn-success, main#pwchange-page input.btn-success, main#pwchange-ok-page input.btn-success, main#logout-page input.btn-success, main#forbidden-page input.btn-success, main#password-reset-page input.btn-success {
+    width: -moz-min-content;
+    width: min-content;
+    padding: 0.5rem 0.65rem;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-dark-submain);
+    background-color: var(--color-highlight);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 959px) {
+  div#user-panel-backdrop {
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  button.button {
+    height: 2rem;
+    padding: 0.5rem 0.65rem;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-dark-submain);
+    background-color: var(--color-highlight);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+  }
+  button.button i {
+    margin-right: 0.5rem;
+  }
+  nav {
+    background-color: var(--color-dark-submain);
+    padding: 1rem;
+    z-index: 999;
+  }
+  nav div.nav-container {
+    justify-content: space-between;
+  }
+  nav div.nav-container ul li, nav div.nav-container ul a {
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--color-light-main);
+    margin: 0 0.5rem;
+    font-weight: 600;
+    padding: 0rem 0.25rem;
+  }
+  nav div.nav-container ul li.user-control i {
+    margin: 0.5rem;
+  }
   nav div.nav-container ul li.brand-container a {
     margin-left: 0;
     margin-right: 2rem;
