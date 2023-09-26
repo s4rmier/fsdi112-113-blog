@@ -6,3 +6,4 @@ staticfiles
 deploy_setup.sh
 base.scss
 base.scss.map
+*.scss
