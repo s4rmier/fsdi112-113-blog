@@ -9,8 +9,12 @@
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" class="btn btn-success" value="Log In">
+            <div class="flex-row align">
+                <input type="submit" class="btn btn-success" value="Log In">
+                <button class="button" onclick="window.location.href = '{% url 'password_reset' %}'">Reset Password</button>
+            </div>
         </form>
+        
     </div>
 </main>
 {% endblock content %}

@@ -64,7 +64,7 @@
 
     button.button {
         height: 2rem;
-        width: min-content;
+        // width: min-content;
         padding: .5rem .65rem;
         font-family: var(--font-links);
         text-transform: uppercase;
@@ -270,6 +270,7 @@
                         }
                     }
                     button.button {
+                        width: min-content;
                         margin-left: 2rem;
                         margin-bottom: 2rem;
                         justify-self: flex-end;
@@ -349,7 +350,7 @@
         }
     }
 
-    main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page,main#pwchange-ok-page, main#logout-page, main#forbidden-page {
+    main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page,main#pwchange-ok-page, main#logout-page, main#forbidden-page, main#password-reset-page {
         min-height: calc(100vh - 72px);
         width: 100%;
         background-color: var(--color-dark-submain);
@@ -359,6 +360,10 @@
         }
 
         div {
+            button.button {
+                margin: 0rem .5rem;
+            }
+
             h1 {
                 margin: 2rem 0rem;
             }

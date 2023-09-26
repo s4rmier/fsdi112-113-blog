@@ -54,8 +54,6 @@
   }
   button.button {
     height: 2rem;
-    width: -moz-min-content;
-    width: min-content;
     padding: 0.5rem 0.65rem;
     font-family: var(--font-links);
     text-transform: uppercase;
@@ -246,6 +244,8 @@
     font-weight: 100;
   }
   main#list-page section#posts-container article.post-item figure button.button {
+    width: -moz-min-content;
+    width: min-content;
     margin-left: 2rem;
     margin-bottom: 2rem;
     justify-self: flex-end;
@@ -313,35 +313,38 @@
   main#detail-page article p {
     font-family: var(--font-title);
   }
-  main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page, main#pwchange-ok-page, main#logout-page, main#forbidden-page {
+  main#delete-page, main#signup-page, main#update-page, main#newpost-page, main#login-page, main#pwchange-page, main#pwchange-ok-page, main#logout-page, main#forbidden-page, main#password-reset-page {
     min-height: calc(100vh - 72px);
     width: 100%;
     background-color: var(--color-dark-submain);
   }
-  main#delete-page p, main#signup-page p, main#update-page p, main#newpost-page p, main#login-page p, main#pwchange-page p, main#pwchange-ok-page p, main#logout-page p, main#forbidden-page p {
+  main#delete-page p, main#signup-page p, main#update-page p, main#newpost-page p, main#login-page p, main#pwchange-page p, main#pwchange-ok-page p, main#logout-page p, main#forbidden-page p, main#password-reset-page p {
     margin: 2rem 0rem 1rem;
   }
-  main#delete-page div h1, main#signup-page div h1, main#update-page div h1, main#newpost-page div h1, main#login-page div h1, main#pwchange-page div h1, main#pwchange-ok-page div h1, main#logout-page div h1, main#forbidden-page div h1 {
+  main#delete-page div button.button, main#signup-page div button.button, main#update-page div button.button, main#newpost-page div button.button, main#login-page div button.button, main#pwchange-page div button.button, main#pwchange-ok-page div button.button, main#logout-page div button.button, main#forbidden-page div button.button, main#password-reset-page div button.button {
+    margin: 0rem 0.5rem;
+  }
+  main#delete-page div h1, main#signup-page div h1, main#update-page div h1, main#newpost-page div h1, main#login-page div h1, main#pwchange-page div h1, main#pwchange-ok-page div h1, main#logout-page div h1, main#forbidden-page div h1, main#password-reset-page div h1 {
     margin: 2rem 0rem;
   }
-  main#delete-page div form, main#signup-page div form, main#update-page div form, main#newpost-page div form, main#login-page div form, main#pwchange-page div form, main#pwchange-ok-page div form, main#logout-page div form, main#forbidden-page div form {
+  main#delete-page div form, main#signup-page div form, main#update-page div form, main#newpost-page div form, main#login-page div form, main#pwchange-page div form, main#pwchange-ok-page div form, main#logout-page div form, main#forbidden-page div form, main#password-reset-page div form {
     width: 70%;
     margin: 0 auto;
   }
-  main#delete-page div form input, main#delete-page div form textarea, main#delete-page div form select, main#signup-page div form input, main#signup-page div form textarea, main#signup-page div form select, main#update-page div form input, main#update-page div form textarea, main#update-page div form select, main#newpost-page div form input, main#newpost-page div form textarea, main#newpost-page div form select, main#login-page div form input, main#login-page div form textarea, main#login-page div form select, main#pwchange-page div form input, main#pwchange-page div form textarea, main#pwchange-page div form select, main#pwchange-ok-page div form input, main#pwchange-ok-page div form textarea, main#pwchange-ok-page div form select, main#logout-page div form input, main#logout-page div form textarea, main#logout-page div form select, main#forbidden-page div form input, main#forbidden-page div form textarea, main#forbidden-page div form select {
+  main#delete-page div form input, main#delete-page div form textarea, main#delete-page div form select, main#signup-page div form input, main#signup-page div form textarea, main#signup-page div form select, main#update-page div form input, main#update-page div form textarea, main#update-page div form select, main#newpost-page div form input, main#newpost-page div form textarea, main#newpost-page div form select, main#login-page div form input, main#login-page div form textarea, main#login-page div form select, main#pwchange-page div form input, main#pwchange-page div form textarea, main#pwchange-page div form select, main#pwchange-ok-page div form input, main#pwchange-ok-page div form textarea, main#pwchange-ok-page div form select, main#logout-page div form input, main#logout-page div form textarea, main#logout-page div form select, main#forbidden-page div form input, main#forbidden-page div form textarea, main#forbidden-page div form select, main#password-reset-page div form input, main#password-reset-page div form textarea, main#password-reset-page div form select {
     padding: 0.5rem 1rem;
     font-family: var(--font-header-ss);
     font-size: 1rem;
     margin: 0.5rem 0rem;
   }
-  main#delete-page div form textarea, main#signup-page div form textarea, main#update-page div form textarea, main#newpost-page div form textarea, main#login-page div form textarea, main#pwchange-page div form textarea, main#pwchange-ok-page div form textarea, main#logout-page div form textarea, main#forbidden-page div form textarea {
+  main#delete-page div form textarea, main#signup-page div form textarea, main#update-page div form textarea, main#newpost-page div form textarea, main#login-page div form textarea, main#pwchange-page div form textarea, main#pwchange-ok-page div form textarea, main#logout-page div form textarea, main#forbidden-page div form textarea, main#password-reset-page div form textarea {
     resize: none;
   }
-  main#delete-page div form label, main#signup-page div form label, main#update-page div form label, main#newpost-page div form label, main#login-page div form label, main#pwchange-page div form label, main#pwchange-ok-page div form label, main#logout-page div form label, main#forbidden-page div form label {
+  main#delete-page div form label, main#signup-page div form label, main#update-page div form label, main#newpost-page div form label, main#login-page div form label, main#pwchange-page div form label, main#pwchange-ok-page div form label, main#logout-page div form label, main#forbidden-page div form label, main#password-reset-page div form label {
     font-family: var(--font-utility);
     text-transform: uppercase;
   }
-  main#delete-page div form input.btn-success, main#signup-page div form input.btn-success, main#update-page div form input.btn-success, main#newpost-page div form input.btn-success, main#login-page div form input.btn-success, main#pwchange-page div form input.btn-success, main#pwchange-ok-page div form input.btn-success, main#logout-page div form input.btn-success, main#forbidden-page div form input.btn-success {
+  main#delete-page div form input.btn-success, main#signup-page div form input.btn-success, main#update-page div form input.btn-success, main#newpost-page div form input.btn-success, main#login-page div form input.btn-success, main#pwchange-page div form input.btn-success, main#pwchange-ok-page div form input.btn-success, main#logout-page div form input.btn-success, main#forbidden-page div form input.btn-success, main#password-reset-page div form input.btn-success {
     width: -moz-min-content;
     width: min-content;
     padding: 0.5rem 0.65rem;
@@ -356,12 +359,12 @@
     display: flex;
     flex-direction: row;
   }
-  main#delete-page div form p, main#signup-page div form p, main#update-page div form p, main#newpost-page div form p, main#login-page div form p, main#pwchange-page div form p, main#pwchange-ok-page div form p, main#logout-page div form p, main#forbidden-page div form p {
+  main#delete-page div form p, main#signup-page div form p, main#update-page div form p, main#newpost-page div form p, main#login-page div form p, main#pwchange-page div form p, main#pwchange-ok-page div form p, main#logout-page div form p, main#forbidden-page div form p, main#password-reset-page div form p {
     margin: 1rem 0rem;
     display: flex;
     flex-direction: column;
   }
-  main#delete-page input.btn-success, main#signup-page input.btn-success, main#update-page input.btn-success, main#newpost-page input.btn-success, main#login-page input.btn-success, main#pwchange-page input.btn-success, main#pwchange-ok-page input.btn-success, main#logout-page input.btn-success, main#forbidden-page input.btn-success {
+  main#delete-page input.btn-success, main#signup-page input.btn-success, main#update-page input.btn-success, main#newpost-page input.btn-success, main#login-page input.btn-success, main#pwchange-page input.btn-success, main#pwchange-ok-page input.btn-success, main#logout-page input.btn-success, main#forbidden-page input.btn-success, main#password-reset-page input.btn-success {
     width: -moz-min-content;
     width: min-content;
     padding: 0.5rem 0.65rem;
