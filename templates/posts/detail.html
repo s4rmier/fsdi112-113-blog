@@ -4,13 +4,11 @@
 
 {% block content %}
     <main id="detail-page" class="flex-col align">
-        {% if user.is_authenticated %}
-        {% if user.username == post.author.username %}
+        {% if user.is_authenticated and user.username == post.author.username %}
         <div class="post-control flex-col align justify">
             <i class="fa-solid fa-pen-to-square" onclick="window.location.href = '{% url 'update' post.id %}'"></i>
             <i class="fa-solid fa-trash-can" onclick="window.location.href = '{% url 'delete' post.id %}'"></i>
         </div>
-        {% endif %}
         {% endif %}
         <article class="container">
             <img src="https://source.unsplash.com/random/800x800/?img=15" alt="">
