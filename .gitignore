@@ -4,3 +4,5 @@ __pycache__
 staticfiles
 .env
 deploy_setup.sh
+base.scss
+base.scss.map
