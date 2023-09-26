@@ -322,7 +322,7 @@
     margin: 2rem 0rem 1rem;
   }
   main#delete-page div button.button, main#signup-page div button.button, main#update-page div button.button, main#newpost-page div button.button, main#login-page div button.button, main#pwchange-page div button.button, main#pwchange-ok-page div button.button, main#logout-page div button.button, main#forbidden-page div button.button, main#password-reset-page div button.button {
-    margin: 0rem 0.5rem;
+    margin: 0rem 1rem;
   }
   main#delete-page div h1, main#signup-page div h1, main#update-page div h1, main#newpost-page div h1, main#login-page div h1, main#pwchange-page div h1, main#pwchange-ok-page div h1, main#logout-page div h1, main#forbidden-page div h1, main#password-reset-page div h1 {
     margin: 2rem 0rem;
