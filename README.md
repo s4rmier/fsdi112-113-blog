@@ -13,8 +13,8 @@ To run this project, open the terminal in the project's folder directory, then r
 
 3.  Install dependencies
 
-   $ pip3 install -r requirements.txt
+       $ pip3 install -r requirements.txt
 
 4.  Run the server
 
-   $ python3 manage.py runserver
+       $ python3 manage.py runserver
